@@ -1,0 +1,36 @@
+{
+  "name": "airplayer",
+  "version": "0.0.0",
+  "description": "A simple command line tool that play local videos on your Apple TV",
+  "bin": {
+    "airplayer": "index.js"
+  },
+  "dependencies": {
+    "mime": "^1.3.4",
+    "range-parser": "^1.0.3"
+  },
+  "devDependencies": {
+    "standard": "^6.0.8"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watson/airplayer.git"
+  },
+  "keywords": [
+    "airplay",
+    "video",
+    "player",
+    "play",
+    "cli",
+    "command"
+  ],
+  "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/airplayer/issues"
+  },
+  "homepage": "https://github.com/watson/airplayer#readme"
+}
