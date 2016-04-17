@@ -2,7 +2,6 @@
 'use strict'
 
 var util = require('util')
-var path = require('path')
 var fs = require('fs')
 var http = require('http')
 var mime = require('mime')
