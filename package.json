@@ -15,7 +15,7 @@
     "standard": "^6.0.8"
   },
   "scripts": {
-    "test": "standard"
+    "test": "standard && node test.js"
   },
   "repository": {
     "type": "git",
