@@ -43,7 +43,7 @@ var server = http.createServer(function (req, res) {
     'Accept-Ranges': 'bytes',
     'Content-Length': (range.end - range.start + 1),
     'Content-Type': contentType,
-    'Content-Range': util.format('bytes %d-%d/%d', range.start, range.end, size),
+    'Content-Range': util.format('bytes %d-%d/%d', range.start, range.end, size)
   })
 
   fs.createReadStream(filename, range).pipe(res)
