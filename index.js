@@ -7,6 +7,7 @@ var http = require('http')
 var mime = require('mime')
 var bonjour = require('bonjour')()
 var rangeParser = require('range-parser')
+var ip = require('internal-ip').v4()
 var AirPlay = require('airplay-protocol')
 
 var filename = process.argv.slice(2).pop()
@@ -26,7 +27,7 @@ var browser = bonjour.find({ type: 'airplay' }, function (tv) {
 
     var airplay = AirPlay(tv.host, tv.port)
 
-    airplay.play('http://192.168.1.12:' + port + '/stream.m4v', 0.5, function (err, res, body) {
+    airplay.play('http://' + ip + ':' + port + '/stream.m4v', function (err, res, body) {
       if (err) throw err
     })
   })

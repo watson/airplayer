@@ -8,6 +8,7 @@
   "dependencies": {
     "airplay-protocol": "^1.0.0",
     "bonjour": "^3.2.2",
+    "internal-ip": "^1.2.0",
     "mime": "^1.3.4",
     "range-parser": "^1.0.3"
   },
