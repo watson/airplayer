@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "A simple command line tool that play local videos on your Apple TV",
   "bin": {
-    "airplayer": "index.js"
+    "airplayer": "bin.js"
   },
   "dependencies": {
     "airplay-protocol": "^1.0.0",
