@@ -1,6 +1,6 @@
 {
   "name": "airplayer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple command line tool that play local videos on your Apple TV",
   "bin": {
     "airplayer": "index.js"
@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/watson/airplayer#readme",
   "coordinates": [
-    55.6469098,
-    12.5508919
+    55.687678,
+    12.5956794
   ]
 }
