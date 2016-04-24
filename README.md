@@ -39,7 +39,8 @@ If you install the module gobally, simply run the `airplayer` command
 with the file you want to play as the first argument.
 
 The `airplayer` command will look for an Apple TV on your local network.
-When one is found, it will start playing the chosen video.
+When one is found, it will start playing the chosen video. Use the
+option `-i` to select the Apple TV to stream to.
 
 ```
 $ airplayer my-video.m4v
