@@ -3,9 +3,7 @@
   "version": "1.0.2",
   "description": "Query your local network for Apple TV's and have them play videos",
   "main": "index.js",
-  "bin": {
-    "airplayer": "bin.js"
-  },
+  "bin": "bin.js",
   "dependencies": {
     "airplay-protocol": "^1.1.0",
     "appendable-cli-menu": "^2.0.0",
