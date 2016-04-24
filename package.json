@@ -1,6 +1,6 @@
 {
   "name": "airplayer",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Query your local network for Apple TV's and have them play videos",
   "main": "index.js",
   "bin": "bin.js",
@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/watson/airplayer#readme",
   "coordinates": [
-    55.687678,
-    12.5956794
+    55.6469012,
+    12.5508987
   ]
 }
