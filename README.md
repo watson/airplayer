@@ -35,8 +35,8 @@ list.on('update', function (player) {
 
 ## Example CLI Usage
 
-Simply install module globally and run the `airplayer` command with the
-file you want to play as the first argument.
+If you install the module gobally, simply run the `airplayer` command
+with the file you want to play as the first argument.
 
 The `airplayer` command will look for an Apple TV on your local network.
 When one is found, it will start playing the chosen video.
@@ -45,8 +45,8 @@ When one is found, it will start playing the chosen video.
 $ airplayer my-video.m4v
 ```
 
-Note that the video must be supported by your Apple TV in order for
-`airplayer` to play it.
+Note that the video must be in a format supported by your Apple TV in
+order for `airplayer` to play it.
 
 ## API
 
