@@ -1,19 +1,21 @@
 {
   "name": "airplayer",
   "version": "1.0.2",
-  "description": "A simple command line tool that play local videos on your Apple TV",
+  "description": "Query your local network for Apple TV's and have them play videos",
+  "main": "index.js",
   "bin": {
     "airplayer": "bin.js"
   },
   "dependencies": {
-    "airplay-protocol": "^1.0.0",
-    "bonjour": "^3.2.2",
+    "airplay-protocol": "^1.1.0",
+    "bonjour": "^3.3.0",
     "internal-ip": "^1.2.0",
     "mime": "^1.3.4",
     "range-parser": "^1.0.3"
   },
   "devDependencies": {
-    "standard": "^6.0.8"
+    "standard": "^6.0.8",
+    "tape": "^4.5.1"
   },
   "scripts": {
     "test": "standard && node test.js"
