@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": "bin.js",
   "dependencies": {
-    "airplay-protocol": "^1.1.0",
+    "airplay-protocol": "^2.0.0",
     "appendable-cli-menu": "^2.0.0",
     "bonjour": "^3.3.0",
     "internal-ip": "^1.2.0",
