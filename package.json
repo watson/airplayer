@@ -35,6 +35,9 @@
     "cli",
     "command"
   ],
+  "engines": {
+    "node": ">= 0.12"
+  },
   "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
   "license": "MIT",
   "bugs": {
