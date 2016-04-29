@@ -57,18 +57,6 @@ function play (tv) {
     var port = server.address().port
 
     var airplay = AirPlay(tv.host, tv.port)
-    airplay.on('state', function (state) {
-      console.log('new state:', state)
-    })
-    airplay._rserver.on('error', function (err) {
-      throw err
-    })
-    airplay._rserver.on('end', function () {
-      console.log('end event')
-    })
-    airplay._rserver.on('close', function () {
-      console.log('close event')
-    })
 
     airplay.play('http://' + ip + ':' + port + '/stream.m4v', function (err, res, body) {
       if (err) throw err
