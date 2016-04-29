@@ -54,8 +54,8 @@ order for `airplayer` to play it.
 ### `var list = airplayer()`
 
 Creates a AirPlay list. When creating a new list it will call
-`list.update()` once. It is up to you to call afterwards incase you want
-to update the list.
+`list.update()` once. It is up to you to call afterwards in case you
+want to update the list.
 
 ### `list.players`
 
