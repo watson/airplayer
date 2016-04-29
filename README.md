@@ -57,6 +57,11 @@ Creates a AirPlay list. When creating a new list it will call
 `list.update()` once. It is up to you to call afterwards incase you want
 to update the list.
 
+### `list.players`
+
+An array of the players that have been found on the local network so
+far.
+
 ### `list.update()`
 
 Updates the player list by querying the local network for `airplay`
