@@ -7,7 +7,7 @@
   "dependencies": {
     "airplay-protocol": "^2.0.1",
     "appendable-cli-menu": "^2.0.0",
-    "bonjour": "^3.3.0",
+    "bonjour": "^3.3.1",
     "internal-ip": "^1.2.0",
     "mime": "^1.3.4",
     "minimist": "^1.2.0",
