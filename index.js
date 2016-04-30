@@ -10,13 +10,12 @@ module.exports = function () {
   var found = []
   var browser = bonjour.find({ type: 'airplay' }, function (service) {
     if (~found.indexOf(service.fqdn)) return
+    found.push(service.fqdn)
 
     var player = new AirPlay(service.host, service.port)
     player.name = service.name
 
-    found.push(service.fqdn)
     list.players.push(player)
-
     list.emit('update', player)
   })
 
