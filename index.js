@@ -14,6 +14,9 @@ module.exports = function () {
 
     var player = new AirPlay(service.host, service.port)
     player.name = service.name
+    player.on('event', function (event) {
+      if (event.state === 'stopped') list.destroy()
+    })
 
     list.players.push(player)
     list.emit('update', player)
