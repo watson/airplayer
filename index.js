@@ -21,10 +21,7 @@ module.exports = function () {
 
   list.players = []
   list.update = browser.update.bind(browser)
-  list.destroy = function () {
-    browser.stop()
-    bonjour.destroy()
-  }
+  list.destroy = bonjour.destroy.bind(bonjour)
 
   return list
 }
