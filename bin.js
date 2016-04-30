@@ -8,6 +8,7 @@ var menu = require('appendable-cli-menu')
 var mime = require('mime')
 var rangeParser = require('range-parser')
 var ip = require('internal-ip').v4()
+var enableDestroy = require('server-destroy')
 var airplayer = require('./')()
 
 var argv = require('minimist')(process.argv.slice(2))
@@ -55,10 +56,16 @@ function play (player) {
   server.listen(function () {
     var port = server.address().port
 
+    player.on('event', function (event) {
+      if (event.state === 'stopped') server.destroy()
+    })
+
     player.play('http://' + ip + ':' + port + '/stream.m4v', function (err, res, body) {
       if (err) throw err
     })
   })
+
+  enableDestroy(server)
 }
 
 function usage () {
