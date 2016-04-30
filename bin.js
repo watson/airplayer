@@ -6,10 +6,9 @@ var fs = require('fs')
 var http = require('http')
 var menu = require('appendable-cli-menu')
 var mime = require('mime')
-var bonjour = require('bonjour')()
 var rangeParser = require('range-parser')
 var ip = require('internal-ip').v4()
-var AirPlay = require('airplay-protocol')
+var airplayer = require('./')()
 
 var argv = require('minimist')(process.argv.slice(2))
 var filename = argv._[0]
@@ -26,15 +25,15 @@ if (interactive) {
   var tvs = menu('Chose an Apple TV', play)
 }
 
-var browser = bonjour.find({ type: 'airplay' }, onTv)
+airplayer.on('update', onTv)
 
-function onTv (tv) {
-  if (interactive) tvs.add(tv)
-  else play(tv)
+function onTv (player) {
+  if (interactive) tvs.add(player)
+  else play(player)
 }
 
-function play (tv) {
-  browser.stop()
+function play (player) {
+  airplayer.destroy()
 
   var server = http.createServer(function (req, res) {
     var stat = fs.statSync(filename)
@@ -56,9 +55,7 @@ function play (tv) {
   server.listen(function () {
     var port = server.address().port
 
-    var airplay = AirPlay(tv.host, tv.port)
-
-    airplay.play('http://' + ip + ':' + port + '/stream.m4v', function (err, res, body) {
+    player.play('http://' + ip + ':' + port + '/stream.m4v', function (err, res, body) {
       if (err) throw err
     })
   })
