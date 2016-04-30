@@ -5,7 +5,7 @@ var Bonjour = require('bonjour')
 var AirPlay = require('airplay-protocol')
 
 module.exports = function () {
-  var bonjour = Bonjour()
+  var bonjour = new Bonjour()
   var list = new EventEmitter()
   var found = []
   var browser = bonjour.find({ type: 'airplay' }, function (service) {
